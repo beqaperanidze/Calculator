@@ -131,6 +131,7 @@ public class Calculator extends JFrame implements ActionListener {
         this.add(keysPanel);
         this.setVisible(true);
         this.setLocationRelativeTo(null);
+
     }
 
     Double firstInput = null;
@@ -343,6 +344,7 @@ public class Calculator extends JFrame implements ActionListener {
     }
 
     DecimalFormat format = new DecimalFormat("0.#");
+    DecimalFormat format1 = new DecimalFormat("0.####");
     private void showL(){
         if (turn) {
             if (firstInput == null) answer.setText("");
@@ -359,6 +361,6 @@ public class Calculator extends JFrame implements ActionListener {
     private void chang(Double x){
         if(x%1==0){
             answer.setText(String.valueOf(format.format(x)));
-        }else  answer.setText(String.valueOf((x)));
+        }else  answer.setText(String.valueOf(format1.format(x)));
     }
 }
