@@ -2,6 +2,7 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.text.DecimalFormat;
 
 public class Calculator extends JFrame implements ActionListener {
 
@@ -132,8 +133,8 @@ public class Calculator extends JFrame implements ActionListener {
         this.setLocationRelativeTo(null);
     }
 
-    Integer firstInput = null;
-    Integer secondInput = null;
+    Double firstInput = null;
+    Double secondInput = null;
     Character operation = null;
     boolean turn = true;
 
@@ -142,7 +143,7 @@ public class Calculator extends JFrame implements ActionListener {
         if (e.getSource() == button1) {
 
             if (operation == null && secondInput == null) {
-                if (firstInput == null) firstInput = 1;
+                if (firstInput == null) firstInput = 1.0;
                 else {
                     firstInput *= 10;
                     firstInput += 1;
@@ -150,210 +151,150 @@ public class Calculator extends JFrame implements ActionListener {
 
             } else if (operation != null) {
                 System.out.println(operation);
-                if (secondInput == null) secondInput = 1;
+                if (secondInput == null) secondInput = 1.0;
                 else {
                     secondInput *= 10;
                     secondInput += 1;
                 }
 
             }
-            if (turn) {
-                if (firstInput == null) answer.setText("");
-                answer.setText(String.valueOf(firstInput));
-            } else {
-                if (secondInput == null) answer.setText("");
-                answer.setText(String.valueOf(secondInput));
-            }
+            showL();
 
         } else if (e.getSource() == button0) {
             if (operation == null && secondInput == null) {
-                if (firstInput == null) firstInput = 0;
+                if (firstInput == null) firstInput = 0.0;
                 else {
                     firstInput *= 10;
                     firstInput += 0;
                 }
             } else if (operation != null) {
-                if (secondInput == null) secondInput = 0;
+                if (secondInput == null) secondInput = 0.0;
                 else {
                     secondInput *= 10;
                     secondInput += 0;
                 }
             }
-            if (turn) {
-                if (firstInput == null) answer.setText("");
-                answer.setText(String.valueOf(firstInput));
-            } else {
-                if (secondInput == null) answer.setText("");
-                answer.setText(String.valueOf(secondInput));
-            }
+            showL();
         } else if (e.getSource() == button2) {
             if (operation == null && secondInput == null) {
-                if (firstInput == null) firstInput = 2;
+                if (firstInput == null) firstInput = 2.0;
                 else {
                     firstInput *= 10;
                     firstInput += 2;
                 }
             } else if (operation != null) {
-                if (secondInput == null) secondInput = 2;
+                if (secondInput == null) secondInput = 2.0;
                 else {
                     secondInput *= 10;
                     secondInput += 2;
                 }
             }
-            if (turn) {
-                if (firstInput == null) answer.setText("");
-                answer.setText(String.valueOf(firstInput));
-            } else {
-                if (secondInput == null) answer.setText("");
-                answer.setText(String.valueOf(secondInput));
-            }
+            showL();
         } else if (e.getSource() == button3) {
             if (operation == null && secondInput == null) {
-                if (firstInput == null) firstInput = 3;
+                if (firstInput == null) firstInput = 3.0;
                 else {
                     firstInput *= 10;
                     firstInput += 3;
                 }
             } else if (operation != null) {
-                if (secondInput == null) secondInput = 3;
+                if (secondInput == null) secondInput = 3.0;
                 else {
                     secondInput *= 10;
                     secondInput += 3;
                 }
             }
-            if (turn) {
-                if (firstInput == null) answer.setText("");
-                answer.setText(String.valueOf(firstInput));
-            } else {
-                if (secondInput == null) answer.setText("");
-                answer.setText(String.valueOf(secondInput));
-            }
+            showL();
         } else if (e.getSource() == button4) {
             if (operation == null && secondInput == null) {
-                if (firstInput == null) firstInput = 4;
+                if (firstInput == null) firstInput = 4.0;
                 else {
                     firstInput *= 10;
                     firstInput += 4;
                 }
             } else if (operation != null) {
-                if (secondInput == null) secondInput = 4;
+                if (secondInput == null) secondInput = 4.0;
                 else {
                     secondInput *= 10;
                     secondInput += 4;
                 }
             }
-            if (turn) {
-                if (firstInput == null) answer.setText("");
-                answer.setText(String.valueOf(firstInput));
-            } else {
-                if (secondInput == null) answer.setText("");
-                answer.setText(String.valueOf(secondInput));
-            }
+            showL();
         } else if (e.getSource() == button5) {
             if (operation == null && secondInput == null) {
-                if (firstInput == null) firstInput = 5;
+                if (firstInput == null) firstInput = 5.0;
                 else {
                     firstInput *= 10;
                     firstInput += 5;
                 }
             } else if (operation != null) {
-                if (secondInput == null) secondInput = 5;
+                if (secondInput == null) secondInput = 5.0;
                 else {
                     secondInput *= 10;
                     secondInput += 5;
                 }
             }
-            if (turn) {
-                if (firstInput == null) answer.setText("");
-                answer.setText(String.valueOf(firstInput));
-            } else {
-                if (secondInput == null) answer.setText("");
-                answer.setText(String.valueOf(secondInput));
-            }
+            showL();
         } else if (e.getSource() == button6) {
             if (operation == null && secondInput == null) {
-                if (firstInput == null) firstInput = 6;
+                if (firstInput == null) firstInput = 6.0;
                 else {
                     firstInput *= 10;
                     firstInput += 6;
                 }
             } else if (operation != null) {
-                if (secondInput == null) secondInput = 6;
+                if (secondInput == null) secondInput = 6.0;
                 else {
                     secondInput *= 10;
                     secondInput += 6;
                 }
             }
-            if (turn) {
-                if (firstInput == null) answer.setText("");
-                answer.setText(String.valueOf(firstInput));
-            } else {
-                if (secondInput == null) answer.setText("");
-                answer.setText(String.valueOf(secondInput));
-            }
+            showL();
         } else if (e.getSource() == button7) {
             if (operation == null && secondInput == null) {
-                if (firstInput == null) firstInput = 7;
+                if (firstInput == null) firstInput = 7.0;
                 else {
                     firstInput *= 10;
                     firstInput += 7;
                 }
             } else if (operation != null) {
-                if (secondInput == null) secondInput = 7;
+                if (secondInput == null) secondInput = 7.0;
                 else {
                     secondInput *= 10;
                     secondInput += 7;
                 }
             }
-            if (turn) {
-                if (firstInput == null) answer.setText("");
-                answer.setText(String.valueOf(firstInput));
-            } else {
-                if (secondInput == null) answer.setText("");
-                answer.setText(String.valueOf(secondInput));
-            }
+            showL();
         } else if (e.getSource() == button8) {
             if (operation == null && secondInput == null) {
-                if (firstInput == null) firstInput = 8;
+                if (firstInput == null) firstInput = 8.0;
                 else {
                     firstInput *= 10;
                     firstInput += 8;
                 }
             } else if (operation != null) {
-                if (secondInput == null) secondInput = 8;
+                if (secondInput == null) secondInput = 8.0;
                 else {
                     secondInput *= 10;
                     secondInput += 8;
                 }
             }
-            if (turn) {
-                if (firstInput == null) answer.setText("");
-                answer.setText(String.valueOf(firstInput));
-            } else {
-                if (secondInput == null) answer.setText("");
-                answer.setText(String.valueOf(secondInput));
-            }
+            showL();
         } else if (e.getSource() == button9) {
             if (operation == null && secondInput == null) {
-                if (firstInput == null) firstInput = 9;
+                if (firstInput == null) firstInput = 9.0;
                 else {
                     firstInput *= 10;
                     firstInput += 9;
                 }
             } else if (operation != null) {
-                if (secondInput == null) secondInput = 9;
+                if (secondInput == null) secondInput = 9.0;
                 else {
                     secondInput *= 10;
                     secondInput += 9;
                 }
             }
-            if (turn) {
-                if (firstInput == null) answer.setText("");
-                answer.setText(String.valueOf(firstInput));
-            } else {
-                if (secondInput == null) answer.setText("");
-                answer.setText(String.valueOf(secondInput));
-            }
+            showL();
         } else if (e.getSource() == buttonC) {
             firstInput = null;
             secondInput = null;
@@ -380,7 +321,6 @@ public class Calculator extends JFrame implements ActionListener {
                 secondInput = null;
                 turn = true;
                 operation = null;
-
             } else firstInput = switch (operation) {
                 case '+' -> firstInput + secondInput;
                 case '-' -> firstInput - secondInput;
@@ -394,11 +334,31 @@ public class Calculator extends JFrame implements ActionListener {
                 }
                 default -> throw new IllegalStateException("Unexpected value: " + operation);
             };
-            if (firstInput != null) answer.setText(String.valueOf(firstInput));
+            if (firstInput != null) chang(firstInput);
             else answer.setText("Error");
             turn = true;
             secondInput = null;
 
         }
+    }
+
+    DecimalFormat format = new DecimalFormat("0.#");
+    private void showL(){
+        if (turn) {
+            if (firstInput == null) answer.setText("");
+            if(firstInput%1==0){
+                answer.setText(String.valueOf(format.format(firstInput)));
+            }else  answer.setText(String.valueOf((firstInput)));
+        } else {
+            if (secondInput == null) answer.setText("");
+            if (secondInput%1==0){
+            answer.setText(String.valueOf(format.format(secondInput)));}
+            else answer.setText(String.valueOf(secondInput));
+        }
+    }
+    private void chang(Double x){
+        if(x%1==0){
+            answer.setText(String.valueOf(format.format(x)));
+        }else  answer.setText(String.valueOf((x)));
     }
 }
